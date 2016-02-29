@@ -1,0 +1,12 @@
+D:\Programming\Projects\Phonebook\Client\bin\Debug\Client.exe.config
+D:\Programming\Projects\Phonebook\Client\bin\Debug\Client.exe
+D:\Programming\Projects\Phonebook\Client\bin\Debug\Client.pdb
+D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.Phonebook.resources
+D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.Properties.Resources.resources
+D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.exe
+D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.pdb
+D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.Views.AddEntryView.resources
+D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.Views.DeleteEntryView.resources
+D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.Views.EditEntryView.resources
