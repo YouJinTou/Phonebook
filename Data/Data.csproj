@@ -4,19 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0DBE807D-EE61-4C50-9C70-93F32F75F9F0}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <ProjectGuid>{A189AA0E-A381-48F8-9963-F160B455B25E}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Client</RootNamespace>
-    <AssemblyName>Client</AssemblyName>
+    <RootNamespace>Data</RootNamespace>
+    <AssemblyName>Data</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,11 +22,9 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>true</Prefer32Bit>
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -60,95 +56,32 @@
       <HintPath>..\packages\System.Data.SQLite.Linq.1.0.99.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\EntryViewModels.cs" />
-    <Compile Include="PhonebookMainView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PhonebookMainView.Designer.cs">
-      <DependentUpon>PhonebookMainView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Phonebook.cs" />
-    <Compile Include="Presenters\MainViewPresenter.cs" />
-    <Compile Include="Presenters\AddEntryPresenter.cs" />
-    <Compile Include="Presenters\BasePresenter.cs" />
+    <Compile Include="DatabaseInitializer.cs" />
+    <Compile Include="DataLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\AddEntryView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\AddEntryView.Designer.cs">
-      <DependentUpon>AddEntryView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DeleteEntryView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\DeleteEntryView.Designer.cs">
-      <DependentUpon>DeleteEntryView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\EditEntryView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\EditEntryView.Designer.cs">
-      <DependentUpon>EditEntryView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Interfaces\IMainView.cs" />
-    <Compile Include="Views\Interfaces\IAddEntryView.cs" />
-    <EmbeddedResource Include="PhonebookMainView.resx">
-      <DependentUpon>PhonebookMainView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Views\AddEntryView.resx">
-      <DependentUpon>AddEntryView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\DeleteEntryView.resx">
-      <DependentUpon>DeleteEntryView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\EditEntryView.resx">
-      <DependentUpon>EditEntryView.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
+    <Compile Include="Repositories\EntryRepository.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Data\Data.csproj">
-      <Project>{a189aa0e-a381-48f8-9963-f160b455b25e}</Project>
-      <Name>Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{98fc4875-14d1-428e-a433-f26d74dccee6}</Project>
       <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.99.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.99.0\build\net451\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

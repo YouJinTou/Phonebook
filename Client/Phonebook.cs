@@ -1,25 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Client.Presenters;
+using Client.Views.Interfaces;
+using Data;
+using System;
 using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class Phonebook : Form
+    static class Phonebook
     {
-        public Phonebook()
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            InitializeComponent();
-        }
+            DatabaseInitializer.Initializer.InitializeDatabase();
 
-        private void addEntryButton_Click(object sender, EventArgs e)
-        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
+            IMainView phonebook = new PhonebookMainView();
+            MainViewPresenter presenter = new MainViewPresenter(phonebook);
+
+            presenter.LoadView(); 
         }
     }
 }

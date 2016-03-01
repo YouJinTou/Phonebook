@@ -34,8 +34,8 @@
             this.addPhonesLabel = new System.Windows.Forms.Label();
             this.addAddressLabel = new System.Windows.Forms.Label();
             this.addAddressTextBox = new System.Windows.Forms.TextBox();
-            this.addCategoryLabel = new System.Windows.Forms.Label();
-            this.addCategoryComboBox = new System.Windows.Forms.ComboBox();
+            this.addGroupLabel = new System.Windows.Forms.Label();
+            this.addGroupComboBox = new System.Windows.Forms.ComboBox();
             this.submitEntryButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -87,22 +87,22 @@
             this.addAddressTextBox.Size = new System.Drawing.Size(191, 20);
             this.addAddressTextBox.TabIndex = 4;
             // 
-            // addCategoryLabel
+            // addGroupLabel
             // 
-            this.addCategoryLabel.AutoSize = true;
-            this.addCategoryLabel.Location = new System.Drawing.Point(12, 107);
-            this.addCategoryLabel.Name = "addCategoryLabel";
-            this.addCategoryLabel.Size = new System.Drawing.Size(49, 13);
-            this.addCategoryLabel.TabIndex = 7;
-            this.addCategoryLabel.Text = "Category";
+            this.addGroupLabel.AutoSize = true;
+            this.addGroupLabel.Location = new System.Drawing.Point(12, 107);
+            this.addGroupLabel.Name = "addGroupLabel";
+            this.addGroupLabel.Size = new System.Drawing.Size(36, 13);
+            this.addGroupLabel.TabIndex = 7;
+            this.addGroupLabel.Text = "Group";
             // 
-            // addCategoryComboBox
+            // addGroupComboBox
             // 
-            this.addCategoryComboBox.FormattingEnabled = true;
-            this.addCategoryComboBox.Location = new System.Drawing.Point(81, 107);
-            this.addCategoryComboBox.Name = "addCategoryComboBox";
-            this.addCategoryComboBox.Size = new System.Drawing.Size(191, 21);
-            this.addCategoryComboBox.TabIndex = 8;
+            this.addGroupComboBox.FormattingEnabled = true;
+            this.addGroupComboBox.Location = new System.Drawing.Point(81, 107);
+            this.addGroupComboBox.Name = "addGroupComboBox";
+            this.addGroupComboBox.Size = new System.Drawing.Size(191, 21);
+            this.addGroupComboBox.TabIndex = 8;
             // 
             // submitEntryButton
             // 
@@ -112,6 +112,7 @@
             this.submitEntryButton.TabIndex = 9;
             this.submitEntryButton.Text = "Add Entry";
             this.submitEntryButton.UseVisualStyleBackColor = true;
+            this.submitEntryButton.Click += new System.EventHandler(this.submitEntryButton_Click);
             // 
             // AddEntryView
             // 
@@ -119,8 +120,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 212);
             this.Controls.Add(this.submitEntryButton);
-            this.Controls.Add(this.addCategoryComboBox);
-            this.Controls.Add(this.addCategoryLabel);
+            this.Controls.Add(this.addGroupComboBox);
+            this.Controls.Add(this.addGroupLabel);
             this.Controls.Add(this.addAddressLabel);
             this.Controls.Add(this.addAddressTextBox);
             this.Controls.Add(this.addPhonesLabel);
@@ -142,8 +143,8 @@
         private System.Windows.Forms.Label addPhonesLabel;
         private System.Windows.Forms.Label addAddressLabel;
         private System.Windows.Forms.TextBox addAddressTextBox;
-        private System.Windows.Forms.Label addCategoryLabel;
-        private System.Windows.Forms.ComboBox addCategoryComboBox;
+        private System.Windows.Forms.Label addGroupLabel;
+        private System.Windows.Forms.ComboBox addGroupComboBox;
         private System.Windows.Forms.Button submitEntryButton;
     }
 }

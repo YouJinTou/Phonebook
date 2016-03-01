@@ -2,7 +2,6 @@ D:\Programming\Projects\Phonebook\Client\bin\Debug\Client.exe.config
 D:\Programming\Projects\Phonebook\Client\bin\Debug\Client.exe
 D:\Programming\Projects\Phonebook\Client\bin\Debug\Client.pdb
 D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
-D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.Phonebook.resources
 D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.Properties.Resources.resources
 D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.csproj.GenerateResource.Cache
 D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.exe
@@ -10,3 +9,16 @@ D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.pdb
 D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.Views.AddEntryView.resources
 D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.Views.DeleteEntryView.resources
 D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.Views.EditEntryView.resources
+D:\Programming\Projects\Phonebook\Client\bin\Debug\Data.dll
+D:\Programming\Projects\Phonebook\Client\bin\Debug\System.Data.SQLite.dll
+D:\Programming\Projects\Phonebook\Client\bin\Debug\Data.pdb
+D:\Programming\Projects\Phonebook\Client\bin\Debug\System.Data.SQLite.xml
+D:\Programming\Projects\Phonebook\Client\bin\Debug\EntityFramework.dll
+D:\Programming\Projects\Phonebook\Client\bin\Debug\EntityFramework.SqlServer.dll
+D:\Programming\Projects\Phonebook\Client\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Programming\Projects\Phonebook\Client\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Programming\Projects\Phonebook\Client\bin\Debug\EntityFramework.xml
+D:\Programming\Projects\Phonebook\Client\bin\Debug\EntityFramework.SqlServer.xml
+D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.PhonebookMainView.resources
+D:\Programming\Projects\Phonebook\Client\bin\Debug\Models.dll
+D:\Programming\Projects\Phonebook\Client\bin\Debug\Models.pdb

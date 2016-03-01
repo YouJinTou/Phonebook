@@ -1,6 +1,6 @@
 ﻿namespace Client
 {
-    partial class Phonebook
+    partial class PhonebookMainView
     {
         /// <summary>
         /// Required designer variable.
@@ -31,8 +31,9 @@
             this.addEntryButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.phoneListGrid = new System.Windows.Forms.DataGridView();
+            this.refreshGridButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.phoneListGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // addEntryButton
@@ -63,26 +64,38 @@
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // phoneListGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(115, 35);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 4;
+            this.phoneListGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.phoneListGrid.Location = new System.Drawing.Point(115, 35);
+            this.phoneListGrid.Name = "phoneListGrid";
+            this.phoneListGrid.Size = new System.Drawing.Size(484, 150);
+            this.phoneListGrid.TabIndex = 4;
             // 
-            // Phonebook
+            // refreshGridButton
+            // 
+            this.refreshGridButton.Location = new System.Drawing.Point(524, 191);
+            this.refreshGridButton.Name = "refreshGridButton";
+            this.refreshGridButton.Size = new System.Drawing.Size(75, 23);
+            this.refreshGridButton.TabIndex = 5;
+            this.refreshGridButton.Text = "Refresh";
+            this.refreshGridButton.UseVisualStyleBackColor = true;
+            this.refreshGridButton.Click += new System.EventHandler(this.refreshGridButton_Click);
+            // 
+            // PhonebookMainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 315);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(643, 331);
+            this.Controls.Add(this.refreshGridButton);
+            this.Controls.Add(this.phoneListGrid);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.addEntryButton);
-            this.Name = "Phonebook";
+            this.Name = "PhonebookMainView";
             this.Text = "Phonebook";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.PhonebookMainView_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.phoneListGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -92,7 +105,8 @@
         private System.Windows.Forms.Button addEntryButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView phoneListGrid;
+        private System.Windows.Forms.Button refreshGridButton;
     }
 }
 
