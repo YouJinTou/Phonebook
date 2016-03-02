@@ -7,7 +7,6 @@ D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.csproj.GenerateResourc
 D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.exe
 D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.pdb
 D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.Views.AddEntryView.resources
-D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.Views.DeleteEntryView.resources
 D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.Views.EditEntryView.resources
 D:\Programming\Projects\Phonebook\Client\bin\Debug\Data.dll
 D:\Programming\Projects\Phonebook\Client\bin\Debug\System.Data.SQLite.dll
@@ -22,3 +21,5 @@ D:\Programming\Projects\Phonebook\Client\bin\Debug\EntityFramework.SqlServer.xml
 D:\Programming\Projects\Phonebook\Client\obj\Debug\Client.PhonebookMainView.resources
 D:\Programming\Projects\Phonebook\Client\bin\Debug\Models.dll
 D:\Programming\Projects\Phonebook\Client\bin\Debug\Models.pdb
+D:\Programming\Projects\Phonebook\Client\bin\Debug\Equin.ApplicationFramework.BindingListView.dll
+D:\Programming\Projects\Phonebook\Client\bin\Debug\Equin.ApplicationFramework.BindingListView.pdb

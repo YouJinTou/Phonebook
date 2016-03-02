@@ -5,6 +5,8 @@ using System.Windows.Forms;
 
 namespace Data
 {
+    // A singleton class that is called at startup to check if the database exists.
+    // If it doesn't, it creates it
     public sealed class DatabaseInitializer
     {
         private static readonly DatabaseInitializer initializer = new DatabaseInitializer();
@@ -65,7 +67,7 @@ namespace Data
 
             this.query.CommandText = "CREATE TABLE IF NOT EXISTS Phones ("
                 + "_id INTEGER PRIMARY KEY NOT NULL, "
-                + "Phone nvarchar(50) NOT NULL, "
+                + "Phone nvarchar(50) UNIQUE NOT NULL, "
                 + "EntryId int NOT NULL, "
                 + "FOREIGN KEY (EntryId) REFERENCES Entries(_id)"
                 + "CONSTRAINT uc_PhoneEntry UNIQUE (EntryId, Phone))";

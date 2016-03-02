@@ -1,5 +1,6 @@
 ﻿using Client.Models;
 using Client.Views.Interfaces;
+using Equin.ApplicationFramework;
 using Models;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,9 +20,9 @@ namespace Client.Presenters
         // Passing form components like this probably isn't
         // entirely correct from an OOP standpoint.
         // Can't use ICollection<IEntry> for some reason
-        public void AssignGridViewColumns(DataGridView grid, ICollection<Entry> entries)
+        public void RefreshGrid(DataGridView grid, ICollection<Entry> entries, int groupIndex)
         {
-            var viewModel = new HashSet<EntryViewModel>();
+            var viewModel = new List<EntryViewModel>();
 
             foreach (var entry in entries)
             {
@@ -36,7 +37,15 @@ namespace Client.Presenters
 
             var source = new BindingSource();
 
-            source.DataSource = viewModel;
+            // Using an external library for sorting and filtering in the DataGridView
+            var bindingList = new BindingListView<EntryViewModel>(viewModel);
+
+            if (groupIndex != 0)
+            {
+                bindingList.ApplyFilter(f => (int)f.Group == groupIndex);
+            }
+
+            source.DataSource = bindingList;
             grid.DataSource = source;
         }
 

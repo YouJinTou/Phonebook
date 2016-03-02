@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.addNameTextBox = new System.Windows.Forms.TextBox();
             this.addNameLabel = new System.Windows.Forms.Label();
             this.addPhonesTextBox = new System.Windows.Forms.TextBox();
@@ -37,6 +38,7 @@
             this.addGroupLabel = new System.Windows.Forms.Label();
             this.addGroupComboBox = new System.Windows.Forms.ComboBox();
             this.submitEntryButton = new System.Windows.Forms.Button();
+            this.addEntryTooltip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // addNameTextBox
@@ -61,6 +63,7 @@
             this.addPhonesTextBox.Name = "addPhonesTextBox";
             this.addPhonesTextBox.Size = new System.Drawing.Size(191, 20);
             this.addPhonesTextBox.TabIndex = 2;
+            this.addEntryTooltip.SetToolTip(this.addPhonesTextBox, "Separate by a comma");
             // 
             // addPhonesLabel
             // 
@@ -114,6 +117,16 @@
             this.submitEntryButton.UseVisualStyleBackColor = true;
             this.submitEntryButton.Click += new System.EventHandler(this.submitEntryButton_Click);
             // 
+            // addEntryTooltip
+            // 
+            this.addEntryTooltip.AutoPopDelay = 5000;
+            this.addEntryTooltip.BackColor = System.Drawing.Color.Khaki;
+            this.addEntryTooltip.InitialDelay = 350;
+            this.addEntryTooltip.ReshowDelay = 100;
+            this.addEntryTooltip.Tag = "";
+            this.addEntryTooltip.ToolTipTitle = "Tooltip!";
+            this.addEntryTooltip.Popup += new System.Windows.Forms.PopupEventHandler(this.addEntryTooltip_Popup);
+            // 
             // AddEntryView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,5 +159,6 @@
         private System.Windows.Forms.Label addGroupLabel;
         private System.Windows.Forms.ComboBox addGroupComboBox;
         private System.Windows.Forms.Button submitEntryButton;
+        private System.Windows.Forms.ToolTip addEntryTooltip;
     }
 }

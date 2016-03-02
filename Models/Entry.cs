@@ -12,13 +12,14 @@ namespace Models
         private ICollection<string> phoneNumbers;
         private string address;
 
+        // Multiple constructors, we need a name and a phone number as a minimum
         public Entry(string name, ICollection<string> phoneNumbers)
-            : this(name, phoneNumbers, null, Group.Acquaintance)
+            : this(name, phoneNumbers, null, Group.Friend)
         {
         }
 
         public Entry(string name, ICollection<string> phoneNumbers, string address)
-            : this(name, phoneNumbers, address, Group.Acquaintance)
+            : this(name, phoneNumbers, address, Group.Friend)
         {
         }
 

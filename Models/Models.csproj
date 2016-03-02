@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditableEntry.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="Entry.cs" />
+    <Compile Include="Interfaces\IEditableEntry.cs" />
     <Compile Include="Interfaces\IEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

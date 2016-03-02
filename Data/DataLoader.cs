@@ -6,6 +6,8 @@ using System.Windows.Forms;
 
 namespace Data
 {
+    // A class to fetch data from the database that will populate certain *default* fields
+    // in different views, such as groups and even entries themselves
     public class DataLoader
     {
         private readonly SQLiteConnection connection;

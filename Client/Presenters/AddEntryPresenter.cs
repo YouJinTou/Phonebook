@@ -18,7 +18,7 @@ namespace Client.Presenters
             this.loader = new DataLoader();
         }
 
-        public void AddEntry(IAddEntryView viewModel)
+        public void AddEntry()
         {
             try
             {
@@ -26,13 +26,14 @@ namespace Client.Presenters
                 {
                     base.connection.Open();
 
-                    var name = viewModel.EntryName;
+                    var name = this.view.EntryName;
                     var phones = Array.ConvertAll(
-                        viewModel.Phones.Split(','), p => p.Trim());
-                    var address = viewModel.Address;
-                    var group = viewModel.Group;
+                        this.view.Phones.Split(','), p => p.Trim());
+                    var address = this.view.Address;
+                    var group = this.view.Group;
 
-                    var entry = new Entry(name, phones, address, group);
+                    var entry = new EditableEntry(name, phones, address, group,
+                        null, null, null, 0);
 
                     base.data.Add(entry);
                 }
@@ -43,6 +44,13 @@ namespace Client.Presenters
             }
         }
 
+        // I can't come up with a good solution for
+        // passing the groups to the Loadiew() method
+        public void LoadGroups(IList<Group> groups)
+        {
+            this.view.Groups = groups;
+        }
+
         public override void LoadView()
         {
             this.view.Show();
@@ -51,13 +59,6 @@ namespace Client.Presenters
         public override void CloseView()
         {
             this.view.Close();
-        }
-
-        // I can't come up with a good solution for
-        // how to pass the groups to the Loadiew() method
-        public void LoadGroups(IList<Group> groups)
-        {
-            this.view.Groups = groups;
         }
     }
 }

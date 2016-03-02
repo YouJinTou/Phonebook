@@ -4,12 +4,6 @@ using Data;
 using Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Client.Views
@@ -29,7 +23,7 @@ namespace Client.Views
 
             this.presenter.LoadGroups(groups);
         }
-
+        
         public string Address
         {
             get { return this.addAddressTextBox.Text; }
@@ -67,13 +61,16 @@ namespace Client.Views
         void IAddEntryView.Close()
         {
             this.Close();
-
         }
 
         private void submitEntryButton_Click(object sender, EventArgs e)
         {
-            this.presenter.AddEntry(this);
+            this.presenter.AddEntry();
             this.Close();
+        }
+
+        private void addEntryTooltip_Popup(object sender, PopupEventArgs e)
+        {
         }
     }
 }

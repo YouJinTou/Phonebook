@@ -45,6 +45,10 @@
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Equin.ApplicationFramework.BindingListView, Version=1.2.2446.31718, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unofficial.BindingListView.1.2.0.0\lib\net20\Equin.ApplicationFramework.BindingListView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -79,6 +83,10 @@
       <DependentUpon>PhonebookMainView.cs</DependentUpon>
     </Compile>
     <Compile Include="Phonebook.cs" />
+    <Compile Include="Presenters\ExportEntriesPresenter.cs" />
+    <Compile Include="Presenters\ImportEntriesPresenter.cs" />
+    <Compile Include="Presenters\DeleteEntryPresenter.cs" />
+    <Compile Include="Presenters\EditEntryPresenter.cs" />
     <Compile Include="Presenters\MainViewPresenter.cs" />
     <Compile Include="Presenters\AddEntryPresenter.cs" />
     <Compile Include="Presenters\BasePresenter.cs" />
@@ -89,18 +97,13 @@
     <Compile Include="Views\AddEntryView.Designer.cs">
       <DependentUpon>AddEntryView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DeleteEntryView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\DeleteEntryView.Designer.cs">
-      <DependentUpon>DeleteEntryView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\EditEntryView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\EditEntryView.Designer.cs">
       <DependentUpon>EditEntryView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Interfaces\IEditEntryView.cs" />
     <Compile Include="Views\Interfaces\IMainView.cs" />
     <Compile Include="Views\Interfaces\IAddEntryView.cs" />
     <EmbeddedResource Include="PhonebookMainView.resx">
@@ -117,9 +120,6 @@
     </Compile>
     <EmbeddedResource Include="Views\AddEntryView.resx">
       <DependentUpon>AddEntryView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\DeleteEntryView.resx">
-      <DependentUpon>DeleteEntryView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\EditEntryView.resx">
       <DependentUpon>EditEntryView.cs</DependentUpon>
